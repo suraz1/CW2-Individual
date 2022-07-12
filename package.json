@@ -1,0 +1,20 @@
+{
+  "name": "coursework",
+  "version": "1.0.0",
+  "description": "This is an individual task for final year",
+  "main": "rest.js",
+  "scripts": {
+    "start": "node rest.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
