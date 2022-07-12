@@ -71,6 +71,14 @@ app.get('/collection/:collectionName', async function (req, res, next) {
   })
 });
 
+// Endpoint to add an order
+app.post('/collection/:collectionName', async function (req, res, next) {
+  await req.collection.insert(req.body, (e, results) => {
+    if (e) return next(e)
+    res.status(201).send(results)
+  })
+})
+
 // Endpoint to update number of available spaces in lesson
 app.put('/collection/:collectionName/:id', async function (req, res, next) {
   await req.collection.updateOne(
